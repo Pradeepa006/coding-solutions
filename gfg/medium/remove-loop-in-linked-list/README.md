@@ -45,7 +45,7 @@ A loop is present in the list, and it is removed.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-14T04:27:10.725Z  
+**Submitted:** 2026-07-14T04:27:27.824Z  
 
 ```java
 /* Structure of linked list Node
