@@ -1,7 +1,5 @@
 import java.util.*;
 import java.io.*;
-import java.util.*;
-
 class Codechef {
     static class FastScanner {
         private final InputStream in;
@@ -23,16 +21,12 @@ class Codechef {
 
         int nextInt() throws IOException {
             int c;
-            do {
-                c = read();
-            } while (c <= ' ' && c != -1);
-
+            do c = read(); while (c <= ' ' && c != -1);
             int sign = 1;
             if (c == '-') {
                 sign = -1;
                 c = read();
             }
-
             int val = 0;
             while (c > ' ') {
                 val = val * 10 + (c - '0');
@@ -62,15 +56,21 @@ class Codechef {
         }
     }
 
-    static long countAtLeast(int[] a, int x) {
-        int n = a.length;
-        int[] pref = new int[n + 1];
-        for (int i = 1; i <= n; i++) {
-            pref[i] = pref[i - 1] + (a[i - 1] >= x ? 1 : -1);
-        }
+    static int lowerBound(long[] arr, int len, long target) {
+    int l = 0, r = len;
+    while (l < r) {
+        int mid = (l + r) >>> 1;
+        if (arr[mid] < target) l = mid + 1;
+        else r = mid;
+    }
+    return l;
+    }
 
-        int[] vals = pref.clone();
+    static long countPositive(long[] pref) {
+        int n = pref.length;
+        long[] vals = pref.clone();
         Arrays.sort(vals);
+
         int m = 1;
         for (int i = 1; i < vals.length; i++) {
             if (vals[i] != vals[m - 1]) vals[m++] = vals[i];
@@ -79,23 +79,22 @@ class Codechef {
         Fenwick fw = new Fenwick(m + 2);
         long ans = 0;
 
-        for (int p : pref) {
+        for (long p : pref) {
             int idx = lowerBound(vals, m, p) + 1;
             ans += fw.sum(idx - 1);
             fw.add(idx, 1);
         }
-
         return ans;
     }
 
-    static int lowerBound(int[] arr, int len, int target) {
-        int l = 0, r = len;
-        while (l < r) {
-            int mid = (l + r) >>> 1;
-            if (arr[mid] < target) l = mid + 1;
-            else r = mid;
+    static long solve(int[] a, int x) {
+        int n = a.length;
+        long[] pref = new long[n + 1];
+        pref[0] = 0;
+        for (int i = 1; i <= n; i++) {
+            pref[i] = pref[i - 1] + (a[i - 1] >= x ? 1 : -1);
         }
-        return l;
+        return countPositive(pref);
     }
 
     public static void main(String[] args) throws Exception {
@@ -108,7 +107,7 @@ class Codechef {
             int[] a = new int[n];
             for (int i = 0; i < n; i++) a[i] = fs.nextInt();
 
-            long ans = countAtLeast(a, 1) - countAtLeast(a, 2);
+            long ans = solve(a, 1) - solve(a, 2);
             out.append(ans).append('\n');
         }
 
