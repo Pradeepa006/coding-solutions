@@ -75,22 +75,48 @@ It's impossible to even modify the given string since it only contains one $0$. 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T15:14:17.878Z  
+**Submitted:** 2026-07-15T15:14:51.088Z  
 
 ```java
 import java.util.*;
 import java.lang.*;
-import java.io.*;
 
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
+class Codechef {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
 
-	}
+        int T = sc.nextInt();
+
+        while (T-- > 0) {
+            int N = sc.nextInt();
+            int K = sc.nextInt();
+
+            String s = sc.next();
+
+            int zeros = 0;
+            for (int i = 0; i < N; i++) {
+                if (s.charAt(i) == '0')
+                    zeros++;
+            }
+
+            int ones = N - zeros;
+
+            if (zeros < K || ones < K) {
+                System.out.println(s);
+            } else {
+                StringBuilder ans = new StringBuilder();
+
+                for (int i = 0; i < zeros; i++)
+                    ans.append('0');
+
+                for (int i = 0; i < ones; i++)
+                    ans.append('1');
+
+                System.out.println(ans);
+            }
+        }
+    }
 }
-
 ```
 
 ---
