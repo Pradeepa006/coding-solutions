@@ -86,7 +86,7 @@ No operations are used.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T15:29:32.823Z  
+**Submitted:** 2026-07-15T15:29:40.849Z  
 
 ```java
 import java.util.*;
