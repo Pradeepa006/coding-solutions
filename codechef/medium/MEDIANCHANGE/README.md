@@ -70,7 +70,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T15:28:01.602Z  
+**Submitted:** 2026-07-15T15:27:24.843Z  
 
 ```java
 import java.util.*;
@@ -131,14 +131,14 @@ class Codechef {
         }
     }
 
-    static int lowerBound(long[] arr, int len, long target) {
-    int l = 0, r = len;
-    while (l < r) {
-        int mid = (l + r) >>> 1;
-        if (arr[mid] < target) l = mid + 1;
-        else r = mid;
-    }
-    return l;
+    static int lowerBound(int[] arr, int len, int x) {
+        int l = 0, r = len;
+        while (l < r) {
+            int mid = (l + r) >>> 1;
+            if (arr[mid] < x) l = mid + 1;
+            else r = mid;
+        }
+        return l;
     }
 
     static long countPositive(long[] pref) {
