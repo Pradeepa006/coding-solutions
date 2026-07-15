@@ -86,7 +86,7 @@ No operations are used.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T15:30:44.250Z  
+**Submitted:** 2026-07-15T15:35:14.757Z  
 
 ```java
 import java.util.*;
@@ -98,6 +98,7 @@ class CodeChef {
         private final InputStream in;
         private final byte[] buffer = new byte[1 << 16];
         private int ptr = 0, len = 0;
+
 
         FastScanner(InputStream is) {
             in = is;
