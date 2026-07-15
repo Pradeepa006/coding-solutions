@@ -58,7 +58,7 @@ aabb
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-15T15:12:08.303Z  
+**Submitted:** 2026-07-15T15:12:14.686Z  
 
 ```java
 import java.util.*;
