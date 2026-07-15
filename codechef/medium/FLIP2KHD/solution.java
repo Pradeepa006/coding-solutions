@@ -8,6 +8,7 @@ class CodeChef {
         private final byte[] buffer = new byte[1 << 16];
         private int ptr = 0, len = 0;
 
+
         FastScanner(InputStream is) {
             in = is;
         }
