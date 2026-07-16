@@ -74,9 +74,9 @@ Form pairs: `gcd(2, 8) = 2` and `gcd(3, 6) = 3`. Thus, the sum is `2 + 3 = 5`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-07-16T10:56:01.908Z  
+**Runtime:** 53 ms (beats 95.50%)  
+**Memory:** 126.1 MB (beats 10.50%)  
+**Submitted:** 2026-07-16T10:56:07.990Z  
 
 ```java
 class Solution {
