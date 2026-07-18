@@ -58,7 +58,7 @@ The greatest common divisor of 3 and 3 is 3.
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 44.9 MB (beats 86.53%)  
-**Submitted:** 2026-07-18T17:33:45.021Z  
+**Submitted:** 2026-07-18T17:33:56.249Z  
 
 ```java
 class Solution {
