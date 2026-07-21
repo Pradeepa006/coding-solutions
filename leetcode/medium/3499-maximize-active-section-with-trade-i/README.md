@@ -76,9 +76,9 @@ Because there is no block of `'1'`s surrounded by `'0'`s, no valid trade is poss
 ## Solution
 
 **Language:** Java  
-**Runtime:** 133 ms (beats 32.39%)  
-**Memory:** 48.2 MB (beats 32.39%)  
-**Submitted:** 2026-07-21T14:21:15.964Z  
+**Runtime:** 0 ms  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-07-21T14:21:44.290Z  
 
 ```java
 class Solution {
