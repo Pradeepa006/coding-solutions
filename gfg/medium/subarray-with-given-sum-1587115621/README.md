@@ -39,7 +39,7 @@ Explanation: There is no subarray with sum 2.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-22T08:06:03.658Z  
+**Submitted:** 2026-07-22T08:06:56.095Z  
 
 ```java
 
@@ -50,8 +50,6 @@ class Solution {
         ArrayList<Integer> idx = new ArrayList<>();
         
         int start = 0 ;
-        //int end = 0 ;
-        
         int sum = 0;
         
         for(int end = 0 ; end < n ; end++) {
