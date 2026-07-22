@@ -51,16 +51,17 @@ minStack.getMin(); // return -2
 ## Solution
 
 **Language:** Java  
-**Runtime:** 36 ms (beats 20.59%)  
-**Memory:** 99.8 MB (beats 54.82%)  
-**Submitted:** 2026-07-22T06:32:00.607Z  
+**Runtime:** 34 ms (beats 52.56%)  
+**Memory:** 100.4 MB (beats 32.22%)  
+**Submitted:** 2026-07-22T06:37:54.347Z  
 
 ```java
 class MinStack {
     Stack<Integer> st = new Stack<>();
     Stack<Integer> minStack = new Stack<>();
     public MinStack() {
-        //Stack<Integer> Stack = new Stack<>();
+        st = new Stack<>();
+        minStack = new Stack<>();
     }
     
     public void push(int value) {
