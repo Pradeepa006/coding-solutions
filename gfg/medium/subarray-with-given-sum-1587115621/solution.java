@@ -6,8 +6,6 @@ class Solution {
         ArrayList<Integer> idx = new ArrayList<>();
         
         int start = 0 ;
-        //int end = 0 ;
-        
         int sum = 0;
         
         for(int end = 0 ; end < n ; end++) {
