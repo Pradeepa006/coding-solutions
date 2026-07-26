@@ -41,9 +41,9 @@ Output: false
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 73.40%)  
-**Memory:** 42.6 MB (beats 91.01%)  
-**Submitted:** 2026-07-26T04:40:32.288Z  
+**Runtime:** 0 ms  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-07-26T04:40:45.272Z  
 
 ```java
 class Solution {
