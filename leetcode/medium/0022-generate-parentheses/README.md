@@ -33,9 +33,9 @@ Output: ["()"]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-04T04:34:58.371Z  
+**Runtime:** 2 ms  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-08-04T04:38:24.728Z  
 
 ```java
 class Solution {
@@ -46,14 +46,14 @@ class Solution {
         return li;
     }
     private static void backtrack(List<String> li , String s , int open , int close , int max){
-        if(max == s.length() * 2) {
+        if(max * 2 == s.length()) {
             li.add(s);
             return;
         }
         if(open < max ) 
-            backtrack(li , "(" , open + 1 , close , max);
-        if(close < max)
-            backtrack(li , ")" , open , close + 1 , max);
+            backtrack(li , s+"(" , open + 1 , close , max);
+        if(close < open)
+            backtrack(li , s+")" , open , close + 1 , max);
     }
 }
 ```
