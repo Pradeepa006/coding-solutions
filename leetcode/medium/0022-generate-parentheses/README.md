@@ -33,9 +33,9 @@ Output: ["()"]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-04T04:38:24.728Z  
+**Runtime:** 2 ms (beats 70.40%)  
+**Memory:** 45.1 MB (beats 12.59%)  
+**Submitted:** 2026-08-04T04:38:38.076Z  
 
 ```java
 class Solution {
