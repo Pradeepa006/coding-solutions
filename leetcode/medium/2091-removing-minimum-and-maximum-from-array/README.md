@@ -63,8 +63,8 @@ We can remove it with 1 deletion.
 
 **Language:** Java  
 **Runtime:** 4 ms (beats 10.73%)  
-**Memory:** 86.6 MB (beats 80.36%)  
-**Submitted:** 2026-08-30T16:08:51.818Z  
+**Memory:** 86.5 MB (beats 89.09%)  
+**Submitted:** 2026-08-30T16:10:07.489Z  
 
 ```java
 class Solution {
@@ -72,7 +72,6 @@ class Solution {
         int n = nums.length;
         int left = 0;
         int right = 0;
-        
         for (int i = 1; i < n; i++) {
             if (nums[i] < nums[left])
                 left = i;
@@ -80,15 +79,12 @@ class Solution {
             if (nums[i] > nums[right])
                 right = i;
         }
-        
         if (left < right) {
             int temp = left;
             left = right;
             right = temp;
-        }
-            
+        }  
         int ans = n;
-        
         for (int i = 0; i <= n; i++) {
             int extra = 0;
             
