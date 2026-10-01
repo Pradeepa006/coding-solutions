@@ -55,25 +55,35 @@ An input string is valid if:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-10-01T10:03:41.411Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-10-01T10:12:34.090Z  
 
 ```java
 class Solution {
     public boolean isValid(String s) {
         Stack<Character> st = new Stack<>();
+        if(s.length() % 2 != 0) {
+            return false;
+        }
         for(int i = 0 ; i < s.length() ; i++) {
             char ch = s.charAt(i);
+            if(ch == '(' || ch == '[' || ch == '{') {
+                st.push(ch);
+                continue;
+            }
+            else {
+            if(st.isEmpty()) {
+                return false;
+            }
+            if ((ch == ')' && st.pop() != '(') || (ch == '}' && st.pop() != '{') || (ch == ']' && st.pop() != '[') ) {
+                return false;
+            }
+            }
             
-            if (!(st.isEmpty()) && (ch == ')' && st.peek() == '(') || (ch == '}' && st.peek() == '{') || (ch == ']' && st.peek() == '[') ) {
-                st.pop();
-            }
-            else{
-                st.add(ch);
-            }
+
         
         }
-        return (st.isEmpty());
+        return st.isEmpty();
     }
 }
 ```
